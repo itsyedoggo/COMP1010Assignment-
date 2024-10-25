@@ -43,9 +43,16 @@ The `Main` class demonstrates the `Playlist` functionality through a simple comm
 5. Display all songs in the playlist.
 6. Exit the program.
 
-## Usage
+## How to Run the Program
 
 1. Compile the Java files:
 
    ```sh
    javac Song.java Playlist.java Main.java
+   
+2. Run the Main program:
+  ```sh
+   java Main
+
+3. Follow the on-screen menu prompts to interact with the playlist.
+   
