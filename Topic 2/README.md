@@ -49,13 +49,13 @@ The `Main` class demonstrates the `Playlist` functionality through a simple comm
 
    ```sh
    javac Song.java Playlist.java Main.java
+   ```
    
-2. Run the Main program:
-  
-  ```sh
-   java Main
-  ```
+2. Run the `Main` program:
 
+   ```sh
+   java Main
+   ```
 
 3. Follow the on-screen menu prompts to interact with the playlist.
    
