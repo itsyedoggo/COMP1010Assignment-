@@ -2,22 +2,24 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Playlist {
-    private ArrayList<Song> songs;
-    int currentSongIndex;
+    private ArrayList<Song> songs; //Store list of songs in playlist 
+    int currentSongIndex; //tracks index of current (playing) song 
 
-    public Playlist() {
+    //Initialises the playlist 
+    public Playlist() { 
         songs = new ArrayList<>();
         currentSongIndex = -1; // No song is playing initially
     }
 
-    public void addSong(Song song) {
+    //If it is the first song, set it as the current song 
+    public void addSong(Song song) { //Add new song to playlist 
         songs.add(song);
         if (currentSongIndex == -1) {
             currentSongIndex = 0; // Set the first song if the playlist was empty
         }
     }
 
-    public void removeSong(Song song) {
+    public void removeSong(Song song) { // Removes song from playlist 
         songs.remove(song);
         if (songs.isEmpty()) {
             currentSongIndex = -1; // Reset if the playlist is empty
@@ -25,7 +27,8 @@ public class Playlist {
             currentSongIndex = songs.size() - 1; // Adjust index if needed
         }
     }
-
+    
+    //Returns the currently playing song, or null if no songs are available
     public Song getCurrentSong() {
         if (songs.isEmpty() || currentSongIndex == -1) {
             return null; // No song available
@@ -33,6 +36,7 @@ public class Playlist {
         return songs.get(currentSongIndex);
     }
 
+    //Advance to next song in the playlist.
     public Song next() {
         if (songs.isEmpty()) {
             return null; // No song available
@@ -41,6 +45,7 @@ public class Playlist {
         return songs.get(currentSongIndex);
     }
 
+    // Moves to the previous song in the playlist.
     public Song previous() {
         if (songs.isEmpty()) {
             return null; // No song available
@@ -49,6 +54,7 @@ public class Playlist {
         return songs.get(currentSongIndex);
     }
 
+    // Selects and plays a random song from the playlist.
     public Song shufflePlay() {
         if (songs.isEmpty()) {
             return null; // No song available
@@ -58,6 +64,7 @@ public class Playlist {
         return songs.get(currentSongIndex);
     }
 
+    //Output/display songs in playlist 
     public void displaySongs() {
         displaySongsRecursive(0);
     }
@@ -68,7 +75,8 @@ public class Playlist {
             displaySongsRecursive(index + 1);
         }
     }
-
+    
+    // Returns the list of all songs in the playlist
     public ArrayList<Song> getSongs() {
         return songs;
     }
