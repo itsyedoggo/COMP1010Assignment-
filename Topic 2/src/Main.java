@@ -1,5 +1,6 @@
 // File: Main.java
-
+//Handles user interaction for the playlist management application 
+//It initialises the playlist with songs and provides an interactive menu to control playback 
 import java.util.Scanner;
 
 public class Main {
