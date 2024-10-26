@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 class PlaylistTest {
 
-    private Playlist playlist;
-    private Song song1, song2, song3;
+    private Playlist playlist; //Playlist for testing 
+    private Song song1, song2, song3; //Songs used for testing 
 
     @BeforeEach
     void setUp() {
-        playlist = new Playlist();
+        playlist = new Playlist(); 
         song1 = new Song("Song 1", "Artist 1"); 
         song2 = new Song("Song 2", "Artist 2");
         song3 = new Song("Song 3", "Artist 3");
